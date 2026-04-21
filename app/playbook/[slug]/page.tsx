@@ -20,7 +20,7 @@ export default async function PlaybookSlugPage({ params }: Props) {
   }
 
   return (
-    <AppShell sectionTitle={navItem.label} sectionType="playbook">
+    <AppShell sectionType="playbook" showSidebar={true}>
       <SectionComponent />
     </AppShell>
   );

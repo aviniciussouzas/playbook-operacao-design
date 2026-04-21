@@ -1,23 +1,26 @@
 import { ReactNode } from "react";
 import { Sidebar } from "./Sidebar";
-import { Topbar } from "./Topbar";
 
 type AppShellProps = {
   children: ReactNode;
-  sectionTitle: string;
-  sectionType: "playbook" | "documentacao";
+  sectionType?: "playbook" | "documentacao";
+  showSidebar?: boolean;
 };
 
 export function AppShell({
   children,
-  sectionTitle,
-  sectionType,
+  sectionType = "playbook",
+  showSidebar = true,
 }: AppShellProps) {
   return (
-    <div className="min-h-screen bg-neutral-950 text-neutral-100 flex">
-      <Sidebar sectionType={sectionType} />
-      <main className="flex-1 ml-[280px] min-h-screen bg-neutral-950">
-        <Topbar title={sectionTitle} />
+    <div className="min-h-screen text-stone-900 flex bg-[var(--app-bg)]">
+      {showSidebar && <Sidebar sectionType={sectionType} />}
+
+      <main
+        className={`flex-1 min-h-screen bg-[var(--app-bg)] ${
+          showSidebar ? "ml-[280px]" : ""
+        }`}
+      >
         <div className="max-w-5xl px-10 py-10">{children}</div>
       </main>
     </div>
