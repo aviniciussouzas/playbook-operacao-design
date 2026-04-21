@@ -1,36 +1,144 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Design Playbook — Sistema de Documentação e Operação Criativa
 
-## Getting Started
+Sistema interno desenvolvido para organizar direção de design, operação criativa e documentação por cliente.
 
-First, run the development server:
+O objetivo é transformar conhecimento disperso (memória, experiência, referências soltas) em um sistema consultável, estruturado e vivo.
+
+---
+
+## ✨ Visão
+
+Este projeto nasce de uma necessidade real:
+
+- reduzir retrabalho
+- facilitar onboarding de designers
+- garantir consistência visual
+- centralizar decisões e aprendizados
+- diminuir dependência de memória individual
+
+Não é apenas um repositório de assets ou brandbook.
+
+É um **sistema de leitura, decisão e execução em design**.
+
+---
+
+## 🧱 Estrutura do Sistema
+
+### 1. Playbook
+
+Camadas estruturais da operação:
+
+- Overview
+- Accounts
+- Allocation
+- Briefing
+- Rituals
+
+Cada seção é construída como componente React, permitindo evolução contínua.
+
+---
+
+### 2. Documentação por cliente
+
+Base viva de conhecimento por conta:
+
+- Direção visual
+- Regras e restrições
+- Boas práticas
+- Referências que performaram
+- Notas operacionais
+
+Rotas:
+/documentacao → listagem de clientes
+/documentacao/[slug] → documentação específica
+
+
+---
+
+## 🧠 Conceito central
+
+O sistema parte de uma mudança importante:
+
+> o problema não é mais gerar — é julgar
+
+A documentação existe para:
+
+- apoiar decisões
+- reduzir erro evitável
+- dar clareza antes da execução
+- transformar repertório em sistema
+
+---
+
+## 🎨 Direção de Interface
+
+- abordagem editorial (não SaaS genérico)
+- foco em leitura e consulta
+- layout leve, com respiro
+- tipografia e conteúdo como protagonistas
+- uso de cards como unidades de conhecimento
+
+---
+
+## ⚙️ Stack
+
+- Next.js (App Router)
+- TypeScript
+- Tailwind CSS
+
+---
+
+## 📁 Estrutura
+app/
+page.tsx
+playbook/
+documentacao/
+page.tsx
+[slug]/
+
+data/
+documentation.ts
+
+components/
+documentation/
+
+
+---
+
+## 🚀 Rodando o projeto
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🧪 Status
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+v0.1 — estrutura inicial funcional
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Inclui:
 
-## Learn More
+App shell com sidebar
+Página de documentação
+Rota dinâmica /documentacao/[slug]
+Layout editorial para páginas internas
 
-To learn more about Next.js, take a look at the following resources:
+🔜 Próximos passos
+refinar galeria de referências (curadoria visual)
+conectar dados reais de contas
+melhorar navegação entre documentações
+evoluir sistema de leitura (tags, contexto, filtros)
+transformar documentação em ferramenta ativa de decisão
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+📌 Nota
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Este projeto não busca ser apenas um sistema interno.
 
-## Deploy on Vercel
+Ele explora a construção de:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+sistemas de pensamento aplicados ao design
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+🧭 Autor
+
+Andrê — Design, sistemas e investigação na interseção entre criação, operação e tecnologia.
